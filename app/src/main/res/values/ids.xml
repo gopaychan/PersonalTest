@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="left_view" type="id"/>
+    <item name="right_view" type="id"/>
+    <item name="check_box" type="id"/>
+</resources>
