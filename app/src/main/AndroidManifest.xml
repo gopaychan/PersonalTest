@@ -30,14 +30,6 @@
             </intent-filter>
         </activity>
 
-        <!--<activity-->
-        <!--android:name=".MainActivity"-->
-        <!--android:parentActivityName=".ListViewActivity">-->
-        <!--<meta-data-->
-        <!--android:name="android.support.PARENT_ACTIVITY"-->
-        <!--android:value=".ListViewActivity" />-->
-        <!--</activity>-->
-
         <service
             android:name=".ProcessService"
             android:process="gopaychan.process" />

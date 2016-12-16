@@ -33,7 +33,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by gopaychan on 2016/11/11.
  */
-public class ListViewActivity extends ListActivity {
+public class CurRunningAppListActivity extends ListActivity {
 
     private List<AppInfo> items;
     private List<AppInfo> itemsTemp;
@@ -42,7 +42,6 @@ public class ListViewActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        startService(new Intent(this, ProcessService.class));
         items = new ArrayList<>();
         itemsTemp = new ArrayList<>();
         adapter = new MyAdapter();
@@ -53,7 +52,7 @@ public class ListViewActivity extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    startActivity(new Intent(ListViewActivity.this, MainActivity.class));
+                    startActivity(new Intent(CurRunningAppListActivity.this, MainActivity.class));
                 } else {
                     startActivity(pm.getLaunchIntentForPackage(items.get(position).getPackageName()));
                 }
@@ -198,7 +197,7 @@ public class ListViewActivity extends ListActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                convertView = LayoutInflater.from(ListViewActivity.this).inflate(R.layout.item, parent, false);
+                convertView = LayoutInflater.from(CurRunningAppListActivity.this).inflate(R.layout.item, parent, false);
             }
             TextView tv = ViewHolder.get(convertView, R.id.text);
             tv.setText(getItem(position).getAppName());
