@@ -1,0 +1,5 @@
+<resources>
+
+    <item name="main" type="layout">@layout/activity_main</item>
+    <item name="isContain" type="bool">true</item>
+</resources>
